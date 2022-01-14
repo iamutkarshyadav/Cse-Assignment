@@ -1,0 +1,39 @@
+#include <stdio.h>
+int findReverse(int n)
+{
+    int reverseNumber = 0;
+ while (n > 0)
+    {
+        reverseNumber = (reverseNumber * 10) + (n % 10);
+        n = n / 10;
+    }
+    return reverseNumber;
+}
+int findSum(int n)
+{
+    int sum = 0;
+
+    while (n > 0)
+    {
+        sum = sum + (n % 10);
+        n = n / 10;
+    }
+    return sum;
+}
+int main()
+{
+    int number;
+    int sum, reverseSum;
+    printf("Enter the number : ");
+    scanf("%d", &number);
+    sum = findSum(number);
+    reverseSum = findReverse(sum);
+    if (sum * reverseSum == number)
+    {
+        printf("%d is a magic number.", number);
+    }
+    else
+    {
+        printf("%d is not a magic number.", number);
+    }
+}
