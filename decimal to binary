@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+long dtb(int decinum)
+{
+    long binarynum = 0;
+    int rem, temp = 1;
+
+    while (decinum!=0)
+    {
+        rem = decinum%2;
+        decinum = decinum / 2;
+        binarynum = binarynum + rem*temp;
+        temp = temp * 10;
+    }
+    return binarynum;
+}
+
+int main()
+{
+    int decinum;
+    printf("Enter a Number: ");
+    scanf("%d", &decinum);
+    printf(" Binary Number is: %ld", dtb(decinum));
+    return 0;
+}
