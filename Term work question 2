@@ -1,0 +1,14 @@
+/*
+Name : Utkarsh Yadav
+Section : E
+RollNumber: 64
+
+Q2. Write a c code that loops over the string and replace each character to the character immediately preceding it in the alphabet. */
+#include <stdio.h> #include <string.h> int main()
+{
+char s[30];
+int i;
+printf(“Enter the word- ”);
+fgets(s,30,stdin); for(i=0;i<strlen(s);i++) {
+s[i]-=1; }
+puts(s); }
